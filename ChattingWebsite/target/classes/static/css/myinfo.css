@@ -1,0 +1,241 @@
+/*元素选择器*/
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial;
+    background-color: #f0f2f5;
+}
+h1{
+    position: relative;
+    left: 20px;
+    top: 5px;
+    font-size: 40px;
+}
+h3{
+    position: relative;
+    top: -25px;
+    left: 20px;
+    font-weight: lighter;
+
+}
+h5{
+    float: left; 
+    font-size: 18px;
+}
+hr{
+    position: relative;
+    color: #dadde1;
+    top: -26px;
+}
+p{
+    position: relative;
+    top: -50px;
+    left: 20px;
+}
+select{
+    border: none;
+    border-radius: 10px;
+    background-color:#f5f6f7;
+    font-weight:bold;
+    font-size: 20px;
+    height: 50px;
+}
+
+/*类选择器*/
+/*register*/
+div.input-frame{
+    height: 700px;
+    width: 700px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+    border-radius: 10px;
+}
+input.input-box{
+    border: none;
+    border-radius: 10px;
+    background-color:#f5f6f7;
+    font-weight:bold;
+    font-size: 20px;
+    height: 50px;
+}
+/*本部分*/
+.header{
+    position: relative;
+    left: -20px;
+    top: -9px;
+    width: 101%;
+    background-color: white;
+    padding: 33px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
+    z-index:2;
+}
+.header a{
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 16px 5%;
+    font-size: 20px;
+    text-decoration: none;
+    position: relative;
+    top: -26px;
+}
+.header a:hover {
+    border-radius: 8px;
+    background-color: #ff5f0e;
+    color: white;
+}
+.padding-nav-box{
+    float: left;
+    height: 1px;
+}
+.webimg{
+    float: left;
+    background-color: white;
+}
+.logo{
+    position: relative;
+    height: 50px;
+    width: 50px;
+    top: -25px;
+}
+.avatar{
+    border-radius: 100%;
+    overflow: hidden;
+    height: 100px;
+    width: 100px;
+}
+.avatar-big{
+    position: relative;
+    top: 20px;
+    height: 200px;
+    width: 200px;
+}
+.userinfo{
+    float: right;
+}
+.welcome-box{
+    float: left;
+    position: relative;
+    top: -38px;
+}
+.white-box {  
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.10), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
+}
+.resume-box{
+    position: absolute; 
+    top:66px;
+    left: 1px;
+    height: 300px;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+}
+.name{
+    position: relative;
+    top: 30px;
+    font-size: 32px;
+    font-weight: bold;
+}
+.input-logo{
+    position: relative;
+    height: 75px;
+    width: 75px;
+    left: 600px;
+    top: -125px;
+}
+.input-family-name{
+    position: relative;
+    width: 330px;
+    left:10px;
+    top:-80px;
+}
+.input-name{
+    position: relative;
+    width: 330px;
+    left:15px;
+    top:-80px;
+}
+.username{
+    position: relative;
+    width: 674px;
+    left: 10px;
+    top: -65px;
+}
+.password{
+    position: relative;
+    width: 674px;
+    left: 10px;
+    top: -50px;
+}
+.birthday{
+    position: relative;
+    width: 674px;
+    left: 10px;
+    top: -60px;
+}
+.sex{
+    width: 120px;
+    position: relative;
+    left: 70px;
+    top: -100px;
+}
+.avatar-text{
+    position: relative;
+    left: 240px;
+    top: -150px;
+}
+.head-sculpture{
+    width: 390px;
+    position: relative;
+    left: 295px;
+    top: -200px;
+}
+.register-button{
+    position: relative;
+    background-color: #ff5f0e;
+    border: none;
+    border-radius: 10px;
+    font-weight:bold;
+    font-size: 20px;
+    color: white;
+    height: 50px;
+    width: 300px;
+    left: -190px;
+    top: -35px;
+    transition-duration: 0.4s;
+}
+.register-button:hover{
+    background-color: white;
+    color: black;
+    border: 2px solid  #ff5f0e;
+}
+
+/*id选择器*/
+#avatar-top{
+    position: relative;
+    height: 50px;
+    width: 50px;
+    top: -25px;
+}
+#slogan{
+    position: relative;
+    max-height: 40px;
+    max-width: 200px;
+    height: 2%;
+    width: 10%;
+    top: -17px;
+}
+#padding1{
+    width: 20%;
+}
+
+#div-main{
+    position: relative;
+    height: 700px;
+    width: 700px;
+    top: 300px;
+    margin: 0 auto;
+}
