@@ -42,7 +42,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Boolean ifUsernameExist(String username) {
-        return userDao.getByName(username) == null;
+        return userDao.getByName(username) != null;
     }
 
     @Override

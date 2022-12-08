@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Document</title>
-<link rel="stylesheet" type="text/css" href="../css/login.css">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="../css/login.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="../javascript/login.js"></script>
 </head>
 <body>
 <div>
@@ -17,14 +21,14 @@
   </div>
   <div id="div-right">
     <div class="input-frame">
-      <form action="friends.html">
+      <form>
         <input class="input-box" type="text" id="username" name="username" placeholder="请输入用户名">
         <br>
         <br>
         <input class="input-box" type="password" id="password" name="password" placeholder="请输入密码">
         <br>
         <br>
-        <input id="login-button" class="input-box" type="submit" value="登录">
+        <input id="login-button" class="input-box" type="button" onclick="tryLogin();" value="登录">
         <div class="padding-div"></div>
         <hr>
         <div class="padding-div"></div>
