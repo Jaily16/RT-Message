@@ -15,6 +15,10 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Boolean register(User user) {
+        //考虑用户无视用户名已经使用警告仍然提交了重复用户名的情况
+        if(ifUsernameExist(user.getUsername())){
+            return false;
+        }
         return userDao.add(user) > 0;
     }
 

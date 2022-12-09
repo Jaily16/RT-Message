@@ -6,15 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="../css/register.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <div id="div-main">
-        <div class="input-frame">
+        <div class="input-frame" id="register-form">
             <h1>注册</h1>
             <h3>快速又简便。</h3>
             <hr>
             <img id="logo" src="../img/logo.png">
-            <form action="/index.html">
+            <form>
                 <input class="input-box" type="text" id="lastname" name="lastname" maxlength="9" placeholder="姓">
                 <input class="input-box" type="text" id="firstname" name="firstname" maxlength="9" placeholder="名">
                 <br>
@@ -25,18 +26,27 @@
                 <input class="input-box" type="date" id="birthday" min="1950-01-01">
                 <p>性别</p>
                 <select id="sex">
-                    <option value="0" checked>女
+                    <option value="0" selected>女
                     <option value="1">男
                 </select>
                 <p id="avatar-text">头像</p>
                 <select id="avatar">
-                    <option value="a" checked>头像a
-                    <option value="b">头像b
-                    <option value="c">头像c
+                    <option value="u01" selected>ikun
+                    <option value="u02">花心超人
+                    <option value="u03">小心超人
+                    <option value="u04">开心超人
+                    <option value="u05">粗心超人
+                    <option value="u06">甜心超人
+                    <option value="u07">大大怪将军
+                    <option value="dsm1">大司马-厅长
+                    <option value="dsm2">大司马-发病
                 </select>
-                <input id="register-button" type="submit" value="注册">
+                <input id="register-button" type="button" value="注册">
             </form>
+            <span class="err-msg" id="username-err">该用户名已被注册</span>
+            <span class="err-msg" id="password-err">密码必须为4-16位</span>
         </div>
     </div>   
 </body>
+<script src="../javascript/register.js"></script>
 </html>

@@ -15,13 +15,6 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @GetMapping("/{username}")
-    private Result<Boolean> checkUsername(@PathVariable String username){
-        if(userService.ifUsernameExist(username)){
-            return new Result<Boolean>(Code.REGISTER_NAME_HAS_BEEN_USED.getCode(), false, "用户名已被使用");
-        }
-        return new Result<Boolean>(Code.REGISTER_NAME_PASS.getCode(), true);
-    }
 
     @PostMapping("/login")
     private Result<Boolean> login(@RequestBody User user){
@@ -34,6 +27,14 @@ public class UserController {
         return new Result<Boolean>(code.getCode(), true);
     }
 
+    @GetMapping("/{username}")
+    private Result<Boolean> checkUsername(@PathVariable String username){
+        if(userService.ifUsernameExist(username)){
+            return new Result<Boolean>(Code.REGISTER_NAME_HAS_BEEN_USED.getCode(), false, "用户名已被使用");
+        }
+        return new Result<Boolean>(Code.REGISTER_NAME_PASS.getCode(), true);
+    }
+
     @PostMapping("/register")
     private Result<Boolean> register(@RequestBody User user){
         if(userService.register(user)){
@@ -42,9 +43,5 @@ public class UserController {
         return new Result<Boolean>(Code.REGISTER_FAILED.getCode(), false, "注册失败");
     }
 
-//    @GetMapping("/{name}")
-//    private User test(@PathVariable("name") String username){
-//        return userService.getUserByName(username);
-//    }
 
 }
