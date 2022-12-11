@@ -30,31 +30,17 @@
     <div>
         <div class="left-column">
             <div>
-                <form>
-                    <input class="input-box" type="search" id="searchid" name="searchid" placeholder="search RT-Message group">
-                </form>
-                <div class="card">
-                    <input class="button add-button" type="submit" value="加入">
-                    <img class="avatar" src="../img/g01.png">
-                    <div class="groupid">1001</div>
-                    <div class="groupname">黏合国</div>
-                </div>
+                <input class="input-box" type="search" id="search-id" name="search-id" placeholder="search RT-Message group">
+                <div id="search-result"></div>
             </div>
         </div>
-        <div class="right-column">
+        <div class="right-column" id="group-list">
             <div class="card group-card">
                 <input class="button chat-button" type="submit" value="聊天">
                 <input class="button delete-button" type="submit" value="退出">
                 <img class="avatar" src="../img/g03.png">
                 <div class="groupid">1002</div>
                 <div class="groupname">苏维埃联盟</div>
-            </div>
-            <div class="card group-card">
-                <input class="button chat-button" type="submit" value="聊天">
-                <input class="button delete-button" type="submit" value="退出">
-                <img class="avatar" src="../img/g05.png">
-                <div class="groupid">1003</div>
-                <div class="groupname">FIFA World Cup</div>
             </div>
         </div>
         <div class="additional-column">
@@ -63,13 +49,15 @@
                 <input class="input-box" type="text" id="groupname" name="groupname" maxlength="20" placeholder="群名">
                 <div class="div-adapt1">
                     <select id="group-avatar">
-                        <option value="a" checked>群头像a
-                        <option value="b">群头像b
-                        <option value="c">群头像c
+                        <option value="g01" selected>联合国
+                        <option value="g02">欧盟
+                        <option value="g03">苏联
+                        <option value="g04">北约
+                        <option value="g05">FIFA
                     </select>
                 </div>
                 <div class="div-adapt2">
-                    <input class="button"  id="add-group-button" type="submit" value="创建群聊">
+                    <input class="button"  id="add-group-button" type="button" value="创建群聊">
                 </div>
             </form>
         </div>

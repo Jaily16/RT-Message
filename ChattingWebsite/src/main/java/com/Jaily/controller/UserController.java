@@ -1,7 +1,9 @@
 package com.Jaily.controller;
 
+import com.Jaily.entity.Group;
 import com.Jaily.entity.User;
 import com.Jaily.service.FriendService;
+import com.Jaily.service.GroupMemberService;
 import com.Jaily.service.UserService;
 import com.Jaily.utility.Code;
 import com.Jaily.utility.Result;
@@ -23,6 +25,9 @@ public class UserController {
 
     @Autowired
     private FriendService friendService;
+
+    @Autowired
+    private GroupMemberService groupMemberService;
 
 
     @PostMapping("/login")
@@ -100,5 +105,12 @@ public class UserController {
         String username = URLDecoder.decode(name);
         List<User> friendList = friendService.getFriendList(username);
         return new Result<List<User>>(Code.FRIEND_LIST_LOAD.getCode(), friendList);
+    }
+
+    @GetMapping("/groupList")
+    private Result<List<Group>> getGroupList(@CookieValue(value = "username") String name){
+        String username = URLDecoder.decode(name);
+        List<Group> groupList = groupMemberService.getGroupList(username);
+        return new Result<List<Group>>(Code.GROUP_LIST_LOAD.getCode(), groupList);
     }
 }
