@@ -193,7 +193,7 @@ input.input-box{
     left: 295px;
     top: -200px;
 }
-.register-button{
+.change-button{
     position: relative;
     background-color: #ff5f0e;
     border: none;
@@ -204,17 +204,17 @@ input.input-box{
     height: 50px;
     width: 300px;
     left: -190px;
-    top: -35px;
+    top: -55px;
     transition-duration: 0.4s;
 }
-.register-button:hover{
+.change-button:hover{
     background-color: white;
     color: black;
     border: 2px solid  #ff5f0e;
 }
 
 /*id选择器*/
-#avatar-top{
+#avatar-login{
     position: relative;
     height: 50px;
     width: 50px;
@@ -238,4 +238,22 @@ input.input-box{
     width: 700px;
     top: 300px;
     margin: 0 auto;
+}
+#div-bottom{
+    top: 30px;
+    margin: 0 auto;
+}
+#signout-button{
+    position: relative;
+    left: 205px;
+    top: -35px;
+    background-color: white;
+    color: black;
+    border: 2px solid  red;
+
+}
+#signout-button:hover{
+    background-color: red;
+    border: none;
+    color: white;
 }

@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>RT_FRIENDS</title>
     <link rel="stylesheet" type="text/css" href="../css/friends.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../javascript/verify.js"></script>
 </head>
 <body>
     <div class="header">
@@ -17,54 +19,23 @@
         <a href="myinfo.html">MyInfo</a>
         <div class="userinfo">
             <div class="welcome-box">
-                <h5 id="lastname">Lai</h5>
+                <h5 id="lastname"></h5>
                 <h5>&nbsp;</h5>
-                <h5 id="firstname">Jaily</h5>
+                <h5 id="firstname"></h5>
                 <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h5>
             </div>
-            <img class="avatar" id="avatar-login" src="../img/u01.png">
+            <img class="avatar" id="avatar-login">
         </div>
     </div>
     <div>
         <div class="left-column">
             <div>
-                <form>
-                    <input class="input-box" type="search" id="searchname" name="searchname" placeholder="search RT-Message friend">
-                </form>
-                <div class="card" id="search-result">
-                    <input class="button add-button" type="submit" value="添加">
-                    <img class="avatar" src="../img/u01.png">
-                    <div class="username">ikun2042gkjs</div>
-                    <div class="whole-name">
-                        <div class="name-part">Lai</div>
-                        <div class="name-part">Jaily</div>
-                    </div>
-                </div>
+                <input class="input-box" type="search" id="search-name" name="search-name" placeholder="search RT-Message friend">
+                <div id="search-result"></div>
             </div>
         </div>
-        <div class="right-column">
-            <div class="card friend-card">
-                <input class="button chat-button" type="submit" value="聊天">
-                <input class="button delete-button" type="submit" value="删除">
-                <img class="avatar" src="../img/u05.png">
-                <div class="username">ikun2042</div>
-                <div class="whole-name">
-                    <div class="name-part">菜</div>
-                    <div class="name-part">虚鲲</div>
-                </div>
-            </div>
-            <div class="card friend-card">
-                <input class="button chat-button" type="submit" value="聊天">
-                <input class="button delete-button" type="submit" value="删除">
-                <img class="avatar" src="../img/dsm2.png">
-                <div class="username">芜湖大司马</div>
-                <div class="whole-name">
-                    <div class="name-part">韩</div>
-                    <div class="name-part">金轮</div>
-                </div>
-            </div>
-        </div>
+        <div class="right-column" id="friend-list"></div>
     </div>
-    
 </body>
+<script src="../javascript/friends.js"></script>
 </html>

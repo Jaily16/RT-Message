@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/myinfo.css">
     <title>Document</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../javascript/verify.js"></script>
 </head>
 <body>
     <div class="header">
@@ -17,17 +19,17 @@
         <a href="myinfo.html">MyInfo</a>
         <div class="userinfo">
             <div class="welcome-box">
-                <h5 id="lastname">Lai</h5>
+                <h5 id="lastname"></h5>
                 <h5>&nbsp;</h5>
-                <h5 id="firstname">Jaily</h5>
+                <h5 id="firstname"></h5>
                 <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h5>
             </div>
-            <img class="avatar" id="avatar-top" src="../img/u01.png">
+            <img class="avatar" id="avatar-login">
         </div>
     </div>
     <div class="white-box resume-box">
-        <img class="avatar avatar-big" src="../img/u01.png">
-        <div class="name" id="middle-firstname">Jaily</div>
+        <img class="avatar avatar-big" id="middle-avatar">
+        <div class="name" id="middle-username"></div>
     </div>
     <div id="div-main">
         <div class="input-frame">
@@ -36,28 +38,39 @@
             <hr>
             <img class="input-logo" src="../img/logo.png">
             <form></form>
-                <input class="input-box input-family-name" type="text" id="changed-lastname" name="family-name" maxlength="9" placeholder="姓" value="Lai">
-                <input class="input-box input-name" type="text" id="name" name="changed-firstname" maxlength="9" placeholder="名" value="Jaily">
+                <input class="input-box input-family-name" type="text" id="changed-lastname" name="lastname" maxlength="9" placeholder="姓">
+                <input class="input-box input-name" type="text" id="changed-firstname" name="firstname" maxlength="9" placeholder="名">
                 <br>
-                <input class="input-box username" type="text" id="username" name="username" maxlength="12" value="LAI0905  用户名不可更改" disabled>
+                <input class="input-box username" type="text" id="username" name="username" maxlength="12" disabled>
                 <br>
-                <input class="input-box password" type="password" id="password" name="password" maxlength="16" placeholder="密码" value="lyl050598">
+                <input class="input-box password" type="password" id="password" name="password" maxlength="16" placeholder="密码">
                 <p>出生日期</p>    
-                <input class="input-box birthday" type="date" id="birthday" min="1950-01-01" value="2001-09-05">
+                <input class="input-box birthday" type="date" id="birthday" min="1950-01-01">
                 <p>性别</p>
                 <select class="sex" id="sex">
-                    <option value="0">女
-                    <option value="1" selected>男
+                    <option value=0>女
+                    <option value=1>男
                 </select>
                 <p class="avatar-text">头像</p>
-                <select class="head-sculpture">
-                    <option value="a" selected>头像a
-                    <option value="b">头像b
-                    <option value="c">头像c
+                <select class="head-sculpture" id="avatar">
+                    <option value="u01">ikun
+                    <option value="u02">花心超人
+                    <option value="u03">小心超人
+                    <option value="u04">开心超人
+                    <option value="u05">粗心超人
+                    <option value="u06">甜心超人
+                    <option value="u07">大大怪将军
+                    <option value="dsm1">大司马-厅长
+                    <option value="dsm2">大司马-发病
                 </select>
-                <input class="register-button" type="button" value="修改">
+                <input class="change-button" id="change-button" type="button" value="修改">
+                <input class="change-button" id="signout-button" type="button" value="退出登录">
             </form>
         </div>
+<!--        <div id="div-bottom">-->
+<!--            <input class="change-button" type="button" value="注销账号">-->
+<!--        </div>-->
     </div>
 </body>
+<script src="../javascript/myinfo.js"></script>
 </html>

@@ -58,7 +58,7 @@ public class UserDaoTest {
 
     @Test
     public void testGetByName(){
-        System.out.println(userDao.getByName("芜湖大司马"));
+        System.out.println(userDao.getByName("芜湖大马"));
     }
 
 }

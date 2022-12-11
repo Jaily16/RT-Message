@@ -51,8 +51,7 @@ registerButton.onclick = function (){
     var username = document.getElementById("username").value.trim();
     var password = document.getElementById("password").value.trim();
     var birthday = document.getElementById("birthday").value;
-    var sexValue = document.getElementById("sex").value;
-    var sex = (sexValue === '1');
+    var sex = document.getElementById("sex").value === '1';
     var avatar = document.getElementById("avatar").value;
     if(lastname === '' || lastname === null || firstname === '' || firstname === null || username === '' || username === null || password === '' || password === null){
         alert("注册内容不能留空");
