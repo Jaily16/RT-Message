@@ -184,5 +184,19 @@ function exitGroup(buttonName){
 
 //按钮点击进入群组聊天事件
 function chatInGroup(buttonName){
-
+    var groupId = buttonName.substring(0, buttonName.length - 1);
+    axios({
+        method: 'get',
+        url: '/groups/startChat/' + groupId
+    })
+        .then((response) => {
+            this.resInfo.data = response.data.data;
+            this.resInfo.code = response.data.code;
+            this.resInfo.msg = response.data.msg;
+            if(this.resInfo.data === true){
+                window.location.href = "../html/groupChat.html"
+            }
+        }).catch(function (error) {
+        console.log(error);
+    });
 }

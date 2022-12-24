@@ -145,5 +145,19 @@ function deleteFriend(buttonName){
 
 //按钮点击与好友聊天事件
 function chatWithFriend(buttonName){
-
+    var friendName = buttonName.substring(0, buttonName.length - 1);
+    axios({
+        method: 'get',
+        url: '/friends/startChat/' + friendName
+    })
+        .then((response) => {
+            this.resInfo.data = response.data.data;
+            this.resInfo.code = response.data.code;
+            this.resInfo.msg = response.data.msg;
+            if(this.resInfo.data === true){
+                window.location.href = "../html/friendChat.html"
+            }
+        }).catch(function (error) {
+        console.log(error);
+    });
 }

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RT_GROUP_CHAT</title>
+  <link rel="stylesheet" type="text/css" href="../css/groupChat.css">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="../javascript/verify.js"></script>
+</head>
+<body>
+<div class="header">
+  <img class="webimg" id="logo" src="../img/logo.png">
+  <img class="webimg" id="slogan" src="../img/slogan.png">
+  <div class="group-info" id="groupid"></div>
+  <div class="userinfo">
+    <div class="welcome-box">
+      <h5 id="lastname"></h5>
+      <h5>&nbsp;</h5>
+      <h5 id="firstname"></h5>
+      <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h5>
+    </div>
+    <img class="avatar" id="avatar-login">
+  </div>
+</div>
+<div>
+  <div class="column" id="message-list"></div>
+  <div class="content-box">
+    <input class="input-box" id="send-message" placeholder="请输入要发送的文字信息">
+    <input class="button send-button" id="send-button" type="button" value="发送">
+    <input class="file-box" id="send-file" type="file">
+    <input class="button file-button" id="file-button" type="button" value="发送文件">
+  </div>
+</div>
+</body>
+<script src="../javascript/groupChat.js"></script>
+</html>

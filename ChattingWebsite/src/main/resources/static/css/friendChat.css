@@ -1,0 +1,234 @@
+/*元素选择器*/
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, serif;
+    background-color: #f0f2f5;
+}
+h5{
+    float: left;
+    font-size: 18px;
+}
+
+/*类选择器*/
+.header{
+    position: relative;
+    left: -20px;
+    top: -9px;
+    width: 101%;
+    background-color: white;
+    padding: 33px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
+    z-index:2;
+}
+.padding-nav-box{
+    float: left;
+    height: 1px;
+}
+input.input-box{
+    position: relative;
+    border: none;
+    border-radius: 10px;
+    background-color:#f0f2f5;
+    font-weight:bold;
+    font-size: 20px;
+    color: black;
+    height: 50px;
+    width: 400px;
+    left: 18px;
+    top: 50px;
+}
+input.file-box{
+    position: relative;
+    border: none;
+    background-color:#f0f2f5;
+    font-size: 20px;
+    color: black;
+    height: 30px;
+    width: 300px;
+    left: 130px;
+    top: 30px;
+}
+.button{
+    height: 45px;
+    border: none;
+    border-radius: 10px;
+    font-weight:bold;
+    font-size: 20px;
+    background-color: #ff4c06;
+    color: white;
+    transition-duration: 0.4s;
+}
+.button:hover{
+    background-color: white;
+    color: black;
+    border: 2px solid  #ff4c06;
+}
+.send-button{
+    width: 100px;
+    position: relative;
+    top: 80px;
+    background-color: #42b72a;
+    left: 96px;
+    z-index: 1;
+}
+.send-button:hover{
+    background-color: white;
+    color: black;
+    border: 2px solid  #42b72a;
+}
+.file-button{
+    width: 100px;
+    position: relative;
+    top: 78px;
+    left: -160px;
+    z-index: 1;
+}
+.webimg{
+    float: left;
+    background-color: white;
+}
+.avatar{
+    float: left;
+    border-radius: 100%;
+    overflow: hidden;
+    height: 100px;
+    width: 100px;
+}
+.avatar-chat{
+    float: left;
+    border-radius: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 50px;
+    width: 50px;
+    top: 25px;
+}
+.friend-info{
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 16px 5%;
+    font-size: 20px;
+    top: -26px;
+    text-decoration: none;
+    position: relative;
+    left: 29%;
+}
+.userinfo{
+    float: right;
+}
+.welcome-box{
+    float: left;
+    position: relative;
+    top: -38px;
+}
+.column {
+    position: absolute;
+    height: 700px;
+    width: 57%;
+    left: 22%;
+    overflow: auto;
+    border: 2px solid orange;
+}
+.content-box {
+    position: absolute;
+    height: 150px;
+    width: 57%;
+    left: 22%;
+    top: 780px;
+    overflow: auto;
+    border: 2px solid orange;
+}
+.message{
+    float: left;
+    position: relative;
+    top: 10px;
+    left: 18px;
+    margin-top: 20px;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    padding: 15px;
+    width: 93%;
+    height: auto;
+    display: inline-block!important;
+    transition-duration: 0.4s;
+}
+.my-message{
+    float: left;
+    position: relative;
+    top: 10px;
+    left: 18px;
+    margin-top: 20px;
+    background-color: #ff9f29;
+    color: black;
+    border-radius: 10px;
+    padding: 15px;
+    width: 93%;
+    height: auto;
+    display: inline-block!important;
+    transition-duration: 0.4s;
+}
+input.input-box{
+    /*位置参数*/
+    position: relative;
+    top: 10px;
+    left: 20%;
+    /*外观参数*/
+    height: 80px;
+    width: 500px;
+    border: none;
+    border-radius: 10px;
+    background-color:#e8f0fe;
+    color: black;
+    /*字体参数*/
+    font-weight:bold;
+    font-size: 20px;
+}
+.username{
+    position: relative;
+    top: -20px;
+    left: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+}
+.whole-name{
+    position: relative;
+    top: -15px;
+    left: 10px;
+}
+.name-part{
+    float: left;
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/*id选择器*/
+#logo{
+    position: relative;
+    height: 50px;
+    width: 50px;
+    top: -25px;
+}
+#avatar-login{
+    position: relative;
+    height: 50px;
+    width: 50px;
+    top: -25px;
+}
+#slogan{
+    position: relative;
+    max-height: 40px;
+    max-width: 200px;
+    height: 2%;
+    width: 10%;
+    top: -17px;
+}
+#padding1{
+    width: 20%;
+}

@@ -16,6 +16,32 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `rt_friend_message`
+--
+
+DROP TABLE IF EXISTS `rt_friend_message`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `rt_friend_message` (
+  `sender` varchar(20) NOT NULL COMMENT '消息发送者',
+  `recipient` varchar(20) NOT NULL COMMENT '消息接收者',
+  `type` tinyint NOT NULL COMMENT '消息类型',
+  `time` datetime NOT NULL COMMENT '消息发送时间',
+  `content` text COMMENT '消息内容',
+  PRIMARY KEY (`sender`,`recipient`,`time`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='用于存储好友发送的消息';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `rt_friend_message`
+--
+
+LOCK TABLES `rt_friend_message` WRITE;
+/*!40000 ALTER TABLE `rt_friend_message` DISABLE KEYS */;
+/*!40000 ALTER TABLE `rt_friend_message` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `rt_friend_relationship`
 --
 
@@ -47,7 +73,8 @@ DROP TABLE IF EXISTS `rt_group`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `rt_group` (
   `groupid` char(4) NOT NULL,
-  `groupname` int DEFAULT NULL,
+  `groupname` varchar(40) NOT NULL,
+  `avatar` varchar(10) NOT NULL,
   PRIMARY KEY (`groupid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -85,6 +112,32 @@ LOCK TABLES `rt_group_member` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `rt_group_message`
+--
+
+DROP TABLE IF EXISTS `rt_group_message`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `rt_group_message` (
+  `groupid` char(4) NOT NULL COMMENT '群号',
+  `sender` varchar(20) NOT NULL COMMENT '消息发送者',
+  `type` tinyint NOT NULL COMMENT '消息类型',
+  `time` datetime NOT NULL COMMENT '消息发送时间',
+  `content` text COMMENT '消息内容',
+  PRIMARY KEY (`groupid`,`sender`,`time`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='用于存储群聊信息';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `rt_group_message`
+--
+
+LOCK TABLES `rt_group_message` WRITE;
+/*!40000 ALTER TABLE `rt_group_message` DISABLE KEYS */;
+/*!40000 ALTER TABLE `rt_group_message` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `rt_user`
 --
 
@@ -109,7 +162,6 @@ CREATE TABLE `rt_user` (
 
 LOCK TABLES `rt_user` WRITE;
 /*!40000 ALTER TABLE `rt_user` DISABLE KEYS */;
-INSERT INTO `rt_user` VALUES ('2050266','小','明','1997','1980-10-10',1,'dsm1'),('Yellowbest2','黄','昊','123456','2002-03-01',1,'u01'),('芜湖大司马','韩','金龙','1997','1983-10-10',1,'dsm1');
 /*!40000 ALTER TABLE `rt_user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -122,4 +174,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-12-09  0:56:58
+-- Dump completed on 2022-12-24 17:31:35
